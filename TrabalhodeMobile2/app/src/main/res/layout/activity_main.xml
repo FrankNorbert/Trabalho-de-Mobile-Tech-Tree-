@@ -28,18 +28,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Main_title" />
 
-    <Button
-        android:id="@+id/button_cpu"
-        android:layout_width="183dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="104dp"
-        android:text="PROCESSADOR"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Select_component" />
+        <Button
+            android:id="@+id/button_cpu"
+            android:layout_width="175dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="104dp"
+            android:text="PROCESSADOR"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Select_component" />
 
     <Button
         android:id="@+id/button_gpu"
-        android:layout_width="183dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="PLACA GRÁFICA"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
 
     <Button
         android:id="@+id/button_motherboard"
-        android:layout_width="218dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="MOTHERBOARD"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
 
     <Button
         android:id="@+id/button_cases"
-        android:layout_width="218dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:layout_marginTop="2dp"
         android:text="CAIXAS"
@@ -64,7 +64,7 @@
 
     <Button
         android:id="@+id/button_monitores"
-        android:layout_width="183dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="MONITORES"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
 
     <Button
         android:id="@+id/button_cooling"
-        android:layout_width="183dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="COOLERS"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
 
     <Button
         android:id="@+id/button_placas_de_som"
-        android:layout_width="218dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="PLACAS DE SOM"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
 
     <Button
         android:id="@+id/button_memorias_ram"
-        android:layout_width="183dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="MEMÓRIA RAM"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,7 @@
 
     <Button
         android:id="@+id/button_psu"
-        android:layout_width="218dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:layout_marginTop="102dp"
         android:text="FONTE DE ALIMENTAÇÃO"
@@ -105,7 +105,7 @@
 
     <Button
         android:id="@+id/button_storage"
-        android:layout_width="218dp"
+        android:layout_width="175dp"
         android:layout_height="55dp"
         android:text="ARMAZENAMENTO"
         app:layout_constraintEnd_toEndOf="parent"
