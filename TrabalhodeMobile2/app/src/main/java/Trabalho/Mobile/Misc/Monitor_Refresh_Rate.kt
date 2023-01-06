@@ -1,4 +1,4 @@
-package Trabalho.Mobile
+package Trabalho.Mobile.Misc
 
 class Monitor_Refresh_Rate {
 }

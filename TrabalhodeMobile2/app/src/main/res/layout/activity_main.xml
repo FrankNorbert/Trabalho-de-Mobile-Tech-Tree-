@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Main_title" />
 
     <Button
-        android:id="@+id/Processador"
+        android:id="@+id/button_cpu"
         android:layout_width="183dp"
         android:layout_height="55dp"
         android:layout_marginTop="104dp"
@@ -38,64 +38,64 @@
         app:layout_constraintTop_toBottomOf="@+id/Select_component" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_gpu"
         android:layout_width="183dp"
         android:layout_height="55dp"
         android:text="PLACA GRÁFICA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Memória_RAM" />
+        app:layout_constraintTop_toBottomOf="@+id/button_memorias_ram" />
 
     <Button
-        android:id="@+id/Motherboard"
+        android:id="@+id/button_motherboard"
         android:layout_width="218dp"
         android:layout_height="55dp"
         android:text="MOTHERBOARD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Placas_de_som" />
+        app:layout_constraintTop_toBottomOf="@+id/button_placas_de_som" />
 
     <Button
-        android:id="@+id/Caixas"
+        android:id="@+id/button_cases"
         android:layout_width="218dp"
         android:layout_height="55dp"
         android:layout_marginTop="2dp"
         android:text="CAIXAS"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fonte_de_alimentação" />
+        app:layout_constraintTop_toBottomOf="@+id/button_psu" />
 
     <Button
-        android:id="@+id/Monitores"
+        android:id="@+id/button_monitores"
         android:layout_width="183dp"
         android:layout_height="55dp"
         android:text="MONITORES"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Coolers" />
+        app:layout_constraintTop_toBottomOf="@+id/button_cooling" />
 
     <Button
-        android:id="@+id/Coolers"
+        android:id="@+id/button_cooling"
         android:layout_width="183dp"
         android:layout_height="55dp"
         android:text="COOLERS"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_gpu" />
 
     <Button
-        android:id="@+id/Placas_de_som"
+        android:id="@+id/button_placas_de_som"
         android:layout_width="218dp"
         android:layout_height="55dp"
         android:text="PLACAS DE SOM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Armazenamento" />
+        app:layout_constraintTop_toBottomOf="@+id/button_storage" />
 
     <Button
-        android:id="@+id/Memória_RAM"
+        android:id="@+id/button_memorias_ram"
         android:layout_width="183dp"
         android:layout_height="55dp"
         android:text="MEMÓRIA RAM"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Processador" />
+        app:layout_constraintTop_toBottomOf="@+id/button_cpu" />
 
     <Button
-        android:id="@+id/Fonte_de_alimentação"
+        android:id="@+id/button_psu"
         android:layout_width="218dp"
         android:layout_height="55dp"
         android:layout_marginTop="102dp"
@@ -104,15 +104,15 @@
         app:layout_constraintTop_toBottomOf="@+id/Select_component" />
 
     <Button
-        android:id="@+id/Armazenamento"
+        android:id="@+id/button_storage"
         android:layout_width="218dp"
         android:layout_height="55dp"
         android:text="ARMAZENAMENTO"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Caixas" />
+        app:layout_constraintTop_toBottomOf="@+id/button_cases" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/copyright_text"
         android:layout_width="192dp"
         android:layout_height="25dp"
         android:layout_marginStart="222dp"
@@ -120,10 +120,10 @@
         android:text="Pimpaloos Corp, 2022/2023"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botão_de_registo" />
+        app:layout_constraintTop_toBottomOf="@+id/button_register" />
 
     <Button
-        android:id="@+id/botão_de_login"
+        android:id="@+id/button_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
@@ -131,16 +131,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Motherboard" />
+        app:layout_constraintTop_toBottomOf="@+id/button_motherboard" />
 
     <Button
-        android:id="@+id/botão_de_registo"
+        android:id="@+id/button_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:text="REGISTAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botão_de_login" />
+        app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
