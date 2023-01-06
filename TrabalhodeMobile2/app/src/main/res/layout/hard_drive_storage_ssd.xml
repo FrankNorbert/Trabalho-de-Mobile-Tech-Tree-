@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="Selecione quanta memória deseja no seu SSD:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tb_8_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="180dp"
+        android:text="8 TB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/tb_4_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="60dp"
+        android:text="4 TB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/gb_480_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="480 GB"
+        app:layout_constraintBottom_toTopOf="@+id/gb_240_ssd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gb_512_ssd" />
+
+    <Button
+        android:id="@+id/tb_2_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:text="2 TB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_8_ssd" />
+
+    <Button
+        android:id="@+id/tb_1_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:text="1 TB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_4_ssd" />
+
+    <Button
+        android:id="@+id/gb_500_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="500 GB"
+        app:layout_constraintBottom_toTopOf="@+id/gb_250_ssd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gb_960_ssd" />
+
+    <Button
+        android:id="@+id/gb_960_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="24dp"
+        android:text="960 GB"
+        app:layout_constraintBottom_toTopOf="@+id/gb_500_ssd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_2_ssd" />
+
+    <Button
+        android:id="@+id/gb_512_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="24dp"
+        android:text="512 GB"
+        app:layout_constraintBottom_toTopOf="@+id/gb_480_ssd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_1_ssd" />
+
+    <Button
+        android:id="@+id/gb_250_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="250 GB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gb_500_ssd" />
+
+    <Button
+        android:id="@+id/gb_240_ssd"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="240 GB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gb_480_ssd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
