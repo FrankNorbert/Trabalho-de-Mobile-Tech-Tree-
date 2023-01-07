@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MSI"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="149dp"
+        android:text="Selecione uma marca para a sua fonte de alimentação:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seasonic"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/button79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EVGA"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <Button
+        android:id="@+id/button80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kolink"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <Button
+        android:id="@+id/button81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Corsair"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="166dp" />
+
+    <Button
+        android:id="@+id/button82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nox"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/button83"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AeroCool"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <Button
+        android:id="@+id/button84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ASUS"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/button85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GigaByte"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <Button
+        android:id="@+id/button87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LC-Power"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <Button
+        android:id="@+id/button88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fractal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <Button
+        android:id="@+id/button89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mars Gaming"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <Button
+        android:id="@+id/button90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phanteks"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="425dp" />
+
+    <Button
+        android:id="@+id/button91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NZXT"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="632dp" />
+
+    <Button
+        android:id="@+id/button92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1Life"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="542dp" />
+
+    <Button
+        android:id="@+id/button93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Antec"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="542dp" />
+
+    <Button
+        android:id="@+id/button94"
+        android:layout_width="167dp"
+        android:layout_height="45dp"
+        android:text="Cooler Master"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <Button
+        android:id="@+id/button95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sharkoon"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="632dp" />
+
+    <Button
+        android:id="@+id/button96"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ewent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="632dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
