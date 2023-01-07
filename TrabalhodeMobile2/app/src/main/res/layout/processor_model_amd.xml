@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/amd_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="174dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/button_ryzen3"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -26,13 +26,13 @@
         android:layout_marginEnd="157dp"
         android:layout_marginBottom="20dp"
         android:text="Ryzen 3"
-        app:layout_constraintBottom_toTopOf="@+id/button24"
+        app:layout_constraintBottom_toTopOf="@+id/button_ryzen5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/amd_text" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/button_ryzen5"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -42,10 +42,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button23" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ryzen3" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/button_ryzen7"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -54,10 +54,10 @@
         android:text="Ryzen 7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ryzen5" />
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/button_ryzen9"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -67,10 +67,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ryzen7" />
 
     <Button
-        android:id="@+id/button27"
+        android:id="@+id/button_ryzen_threadripper"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -79,10 +79,10 @@
         android:text="Threadripper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button26" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ryzen9" />
 
     <Button
-        android:id="@+id/button28"
+        android:id="@+id/button_threadripper_pro"
         android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="157dp"
@@ -91,5 +91,5 @@
         android:text="Threadripper Pro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button27" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ryzen_threadripper" />
 </androidx.constraintlayout.widget.ConstraintLayout>

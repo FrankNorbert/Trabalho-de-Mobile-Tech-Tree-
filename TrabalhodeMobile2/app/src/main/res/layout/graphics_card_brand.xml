@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/intel_placa_gráfica"
+        android:id="@+id/intel_placa_grafica"
         android:layout_width="186dp"
         android:layout_height="80dp"
         android:layout_marginStart="138dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/marca_de_placa_gráfica" />
 
     <Button
-        android:id="@+id/amd_placa_gráfica"
+        android:id="@+id/amd_placa_grafica"
         android:layout_width="186dp"
         android:layout_height="80dp"
         android:layout_marginStart="129dp"
@@ -39,10 +39,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/intel_placa_gráfica" />
+        app:layout_constraintTop_toBottomOf="@+id/intel_placa_grafica" />
 
     <Button
-        android:id="@+id/nvidia"
+        android:id="@+id/nvidia_placa_grafica"
         android:layout_width="186dp"
         android:layout_height="80dp"
         android:layout_marginStart="145dp"
@@ -52,5 +52,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amd_placa_gráfica" />
+        app:layout_constraintTop_toBottomOf="@+id/amd_placa_grafica" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,90 +17,90 @@
         tools:layout_editor_absoluteY="85dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_60hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:text="60 Hz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button_138hz" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_144hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:text="144 Hz"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintStart_toEndOf="@+id/button_160hz"
+        app:layout_constraintTop_toBottomOf="@+id/button_170hz" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_240hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:text="240 Hz"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintEnd_toStartOf="@+id/button_220hz"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button17"
-        app:layout_constraintTop_toBottomOf="@+id/button20" />
+        app:layout_constraintStart_toEndOf="@+id/button_260hz"
+        app:layout_constraintTop_toBottomOf="@+id/button_280hz" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_120hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:text="120 Hz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button_160hz" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_138hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:text="138 Hz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintTop_toBottomOf="@+id/button_165hz" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/button_160hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:text="160 Hz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintTop_toBottomOf="@+id/button_175hz" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button_170hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:text="170 Hz"
-        app:layout_constraintStart_toEndOf="@+id/button12"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintStart_toEndOf="@+id/button_175hz"
+        app:layout_constraintTop_toBottomOf="@+id/button_240hz" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/button_165hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:text="165 Hz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button13" />
+        app:layout_constraintTop_toBottomOf="@+id/button_220hz" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/button_270hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
@@ -109,51 +109,51 @@
         android:text="270 Hz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.687"
-        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintStart_toEndOf="@+id/button_280hz"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/button_175hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:text="175 Hz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
+        app:layout_constraintTop_toBottomOf="@+id/button_260hz" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/button_220hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
         android:text="220 Hz"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintTop_toBottomOf="@+id/button_270hz" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/button_260hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:text="260 Hz"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button19" />
+        app:layout_constraintTop_toBottomOf="@+id/button_360hz" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/button_75hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:text="75 Hz"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/button_120hz"
+        app:layout_constraintTop_toBottomOf="@+id/button_144hz" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/button_360hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -163,12 +163,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/button_280hz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="192dp"
         android:text="280 Hz"
-        app:layout_constraintStart_toEndOf="@+id/button19"
+        app:layout_constraintStart_toEndOf="@+id/button_360hz"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

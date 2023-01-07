@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975943120597",
+    "project_id": "trabalho-de-mobile",
+    "storage_bucket": "trabalho-de-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975943120597:android:997fc3101681717784145c",
+        "android_client_info": {
+          "package_name": "Trabalho.Mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975943120597-i02dgi2vle8tdnuk5ur7op8aeiqvr85v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDms3kMuu6deofDPxWYsASpTYAmBNHIYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975943120597-i02dgi2vle8tdnuk5ur7op8aeiqvr85v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

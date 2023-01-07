@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button36"
+        android:id="@+id/button_ddr3"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -28,10 +28,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button40" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ddr2" />
 
     <Button
-        android:id="@+id/button37"
+        android:id="@+id/button_ddr4"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -41,10 +41,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button36" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ddr3" />
 
     <Button
-        android:id="@+id/button38"
+        android:id="@+id/button_ddr5"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -54,10 +54,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button37" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ddr4" />
 
     <Button
-        android:id="@+id/button39"
+        android:id="@+id/button_ddr1"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
-        android:id="@+id/button40"
+        android:id="@+id/button_ddr2"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -79,5 +79,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button39" />
+        app:layout_constraintTop_toBottomOf="@+id/button_ddr1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
