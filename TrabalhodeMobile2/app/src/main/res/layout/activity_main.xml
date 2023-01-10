@@ -13,103 +13,20 @@
         android:text="TECH-TREE pre-alpha"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/Select_component"
+        android:id="@+id/Select_option_text"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_marginTop="86dp"
-        android:text="Selecione o componente que deseja procurar."
+        android:text="Selecione uma opção do menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Main_title" />
-
-        <Button
-            android:id="@+id/button_cpu"
-            android:layout_width="175dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="104dp"
-            android:text="PROCESSADOR"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Select_component" />
-
-    <Button
-        android:id="@+id/button_gpu"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="PLACA GRÁFICA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_memorias_ram" />
-
-    <Button
-        android:id="@+id/button_motherboard"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="MOTHERBOARD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_placas_de_som" />
-
-    <Button
-        android:id="@+id/button_cases"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="2dp"
-        android:text="CAIXAS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_psu" />
-
-    <Button
-        android:id="@+id/button_monitores"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="MONITORES"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_cooling" />
-
-    <Button
-        android:id="@+id/button_cooling"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="COOLERS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_gpu" />
-
-    <Button
-        android:id="@+id/button_placas_de_som"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="PLACAS DE SOM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_storage" />
-
-    <Button
-        android:id="@+id/button_memorias_ram"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="MEMÓRIA RAM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_cpu" />
-
-    <Button
-        android:id="@+id/button_psu"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="102dp"
-        android:text="FONTE DE ALIMENTAÇÃO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Select_component" />
-
-    <Button
-        android:id="@+id/button_storage"
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="ARMAZENAMENTO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_cases" />
 
     <TextView
         android:id="@+id/copyright_text"
@@ -132,5 +49,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.912" />
+
+    <Button
+        android:id="@+id/main_rig_builder_button"
+        android:layout_width="128dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginBottom="179dp"
+        android:text="Rig Builder"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Select_option_text" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toStartOf="@+id/main_part_helper_button"
+        app:layout_constraintStart_toEndOf="@+id/main_rig_builder_button"
+        app:layout_constraintTop_toBottomOf="@+id/Select_option_text"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <Button
+        android:id="@+id/main_part_helper_button"
+        android:layout_width="128dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="179dp"
+        android:text="Part Helper"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/Select_option_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

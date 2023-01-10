@@ -53,7 +53,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Login feito com sucesso!", Toast.LENGTH_SHORT).show()
                 val intentToMain = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intentToMain)
-
             } else{
                 Toast.makeText(this@LoginActivity,"Falha no login, ou a senha ou o e-mail estão incorretos",Toast.LENGTH_SHORT).show()
             }
