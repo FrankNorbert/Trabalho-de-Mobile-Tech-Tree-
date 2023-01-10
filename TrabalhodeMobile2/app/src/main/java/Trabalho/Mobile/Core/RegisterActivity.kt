@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
 
         returnButton.setOnClickListener{
             Toast.makeText(this,"Voltando ao início",Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this@RegisterActivity,MainActivity::class.java))
+            startActivity(Intent(this@RegisterActivity,LoginActivity::class.java))
             finish()
         }
 
@@ -56,10 +56,7 @@ class RegisterActivity : AppCompatActivity() {
         firebaseAuth.createUserWithEmailAndPassword(txtEmail,txtPassword).addOnCompleteListener(this){ task->
             if(task.isSuccessful){
                 Toast.makeText(this, "Registro feito com sucesso!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@RegisterActivity,MainActivity::class.java))
-                //MainActivity.botaoRegister.visibility = View.INVISIBLE
-                //MainActivity.botaoLogin.visibility = View.INVISIBLE
-                //MainActivity.botaoLogout.visibility = View.VISIBLE
+                startActivity(Intent(this@RegisterActivity,LoginActivity::class.java))
                 finish()
             } else{
                 Toast.makeText(this,"Falha no registro", Toast.LENGTH_SHORT).show()

@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var email :EditText
     private lateinit var password:EditText
     private lateinit var loginButton :Button
-    private lateinit var returnButton :ImageView
+    private lateinit var goToRegisterButton: Button
 
     private lateinit var auth:FirebaseAuth
 
@@ -28,15 +28,9 @@ class LoginActivity : AppCompatActivity() {
         email = findViewById(R.id.login_email_input)
         password = findViewById(R.id.login_password_input)
         loginButton = findViewById(R.id.login_button)
-        returnButton = findViewById(R.id.login_Return_Button)
+        goToRegisterButton = findViewById(R.id.login_register_button)
 
         auth = FirebaseAuth.getInstance()
-
-        returnButton.setOnClickListener{
-            Toast.makeText(this,"Voltando ao início",Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this@LoginActivity,MainActivity::class.java))
-            finish()
-        }
 
         loginButton.setOnClickListener{
             var txt_email : String = email.text.toString()
@@ -44,23 +38,36 @@ class LoginActivity : AppCompatActivity() {
 
             loginUser(txt_email, txt_password)
         }
+
+        goToRegisterButton.setOnClickListener{
+            Toast.makeText(this, "A new soldier will join so", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@LoginActivity,RegisterActivity::class.java))
+            finish()
+        }
     }
 
     private fun loginUser(txtEmail: String, txtPassword: String) {
 
-        auth.signInWithEmailAndPassword(txtEmail,txtPassword).addOnCompleteListener(this){ task ->
-            if (task.isSuccessful){
+        auth.signInWithEmailAndPassword(txtEmail,txtPassword).addOnCompleteListener{
+            if(it.isSuccessful){
                 Toast.makeText(this, "Login feito com sucesso!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                MainActivity.botaoLogin.visibility = View.GONE
-                MainActivity.botaoRegister.visibility = View.GONE
-                MainActivity.botaoLogout.visibility = View.VISIBLE
-                finish()
+                val intentToMain = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(intentToMain)
+
             } else{
                 Toast.makeText(this@LoginActivity,"Falha no login, ou a senha ou o e-mail estão incorretos",Toast.LENGTH_SHORT).show()
             }
 
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if(auth.currentUser != null){
+            val intentToMain = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intentToMain)
+        }
     }
 }
