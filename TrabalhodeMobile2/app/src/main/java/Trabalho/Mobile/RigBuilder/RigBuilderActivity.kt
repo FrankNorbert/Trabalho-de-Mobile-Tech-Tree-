@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
@@ -53,7 +55,7 @@ class RigBuilderActivity : AppCompatActivity() {
                 Toast.makeText(this,"Pc added",Toast.LENGTH_SHORT).show()
             }.addOnFailureListener{ e->
                 Log.w(TAG,"Error Adding PC",e)
-                Toast.makeText(this,"Sorry link, i can't give credit, come back when\n you're a little hmmm richer",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
             }
         }
         pcListView.adapter = pcAdapter
@@ -105,31 +107,31 @@ class RigBuilderActivity : AppCompatActivity() {
 
             deleteButton.setOnClickListener{
 
-                var pcId = db.collection("users").document(userId).collection("PC").document().id
+                db.collection("users")
+                    .document(userId)
+                    .collection("PC")
+                    .whereEqualTo("name",pc[p0].name)
+                    .get().addOnCompleteListener{ task ->
 
-                db.collection("users").document(userId).collection("PC").document(pcId).delete().addOnSuccessListener {
-                    Log.d(TAG,"Pc deleted with success")
-                    Toast.makeText(this@RigBuilderActivity,"YOU KILLED IT",Toast.LENGTH_SHORT).show()
-                }.addOnFailureListener{
-                    Toast.makeText(this@RigBuilderActivity,"Failed to delete the pc",Toast.LENGTH_SHORT).show()
-                }
-
-                db.collection("users").document(userId).collection("PC").addSnapshotListener{ value, e->
-
-                    if (e!=null){
-                        Log.w(TAG,"Listen failed.",e)
-                        return@addSnapshotListener
+                        if(task.isSuccessful && !task.getResult().isEmpty){
+                            var documentSnapshot : DocumentSnapshot = task.getResult().documents.get(0)
+                            var documentName :String = documentSnapshot.id
+                            db.collection("users")
+                                .document(userId)
+                                .collection("PC")
+                                .document(documentName)
+                                .delete()
+                                .addOnSuccessListener {
+                                    Toast.makeText(this@RigBuilderActivity,"Pc deleted",Toast.LENGTH_SHORT).show()
+                                    Log.d(TAG,"Successfully deleted")
+                                }.addOnFailureListener {
+                                    Toast.makeText(this@RigBuilderActivity,"Something has ocurred",Toast.LENGTH_SHORT).show()
+                                    Log.w(TAG,"Could not delete the pc")
+                                }
+                        }else{
+                            Toast.makeText(this@RigBuilderActivity,"Could not delete the pc",Toast.LENGTH_SHORT).show()
+                        }
                     }
-
-                    pc.clear()
-                    for (doc in value!!){
-                        val pcThing = PC.fromQueryDoc(doc)
-                        pc.remove(pcThing)
-                    }
-
-                    pcAdapter.notifyDataSetChanged()
-                }
-
             }
 
             editButton.setOnClickListener{

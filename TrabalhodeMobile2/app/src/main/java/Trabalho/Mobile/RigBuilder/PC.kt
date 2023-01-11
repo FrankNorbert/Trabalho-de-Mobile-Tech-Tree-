@@ -41,6 +41,10 @@ class PC {
         )
     }
 
+    fun getPcId():String{
+        return id
+    }
+
     companion object{
         fun fromQueryDoc(documentSnapshot: DocumentSnapshot):PC{
             return PC(
