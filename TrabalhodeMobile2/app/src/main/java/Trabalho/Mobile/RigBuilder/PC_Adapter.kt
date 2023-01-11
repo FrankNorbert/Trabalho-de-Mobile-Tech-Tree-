@@ -1,25 +1,26 @@
 package Trabalho.Mobile.RigBuilder
 
-import Trabalho.Mobile.Components.*
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
 
-class PC_Adapter {
+class PC_Adapter(pcArrayList: ArrayList<PC>) : BaseAdapter() {
 
-    lateinit var id:String
-    var name : String? = null
-    lateinit var cpu :CPU
-    lateinit var gpu: GPU
-    lateinit var motherBoard: MotherBoard
+    var pcArrayList = pcArrayList
 
-    constructor(id:String, name:String?){
-        this.id = id
-        this.name = name
+    override fun getCount(): Int {
+        return this.pcArrayList.size
     }
 
-    constructor(id:String, name:String?, cpu: CPU,gpu: GPU,motherBoard: MotherBoard){
-        this.id = id
-        this.name = name
-        this.cpu = cpu
-        this.gpu = gpu
-        this.motherBoard = motherBoard
+    override fun getItem(p0: Int): Any {
+        return this.pcArrayList[p0]
+    }
+
+    override fun getItemId(p0: Int): Long {
+        TODO("Not yet implemented")
+    }
+
+    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
+        TODO("Not yet implemented")
     }
 }
