@@ -1,6 +1,7 @@
 package Trabalho.Mobile.Core
 
 
+import Trabalho.Mobile.PartPicker.PartPickerActivity
 import Trabalho.Mobile.R
 import Trabalho.Mobile.RigBuilder.RigBuilderActivity
 import android.content.Intent
@@ -35,16 +36,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity,RigBuilderActivity::class.java))
         }
 
+        botaoInformacao.setOnClickListener{
+            //criar ainda o bagulho do popup
+        }
+
+        botaoPartPicker.setOnClickListener{
+            Toast.makeText(this,"Are you searching for a new friend?",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this@MainActivity,PartPickerActivity::class.java))
+        }
+
         botaoLogout.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             Toast.makeText(this,"You will touch some grass", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this@MainActivity,LoginActivity::class.java))
         }
-
-        /*
-        botaoLogin.setOnClickListener{
-            setContentView(R.layout.login_screen)
-        }
-        */
     }
 }

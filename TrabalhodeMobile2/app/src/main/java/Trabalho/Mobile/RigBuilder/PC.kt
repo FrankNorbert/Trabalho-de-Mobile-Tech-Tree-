@@ -1,11 +1,13 @@
 package Trabalho.Mobile.RigBuilder
 
 import Trabalho.Mobile.Components.*
+import com.google.firebase.firestore.DocumentSnapshot
 
 class PC {
 
-    lateinit var id:String
+    var id:String
     var name : String? = null
+    var counter : Long? = null
     lateinit var cpu :CPU
     lateinit var gpu: GPU
     lateinit var motherBoard: MotherBoard
@@ -36,5 +38,14 @@ class PC {
             "id" to id,
             "name" to name
         )
+    }
+
+    companion object{
+        fun fromQueryDoc(documentSnapshot: DocumentSnapshot):PC{
+            return PC(
+                documentSnapshot["id"] as String,
+                documentSnapshot["name"] as String
+            )
+        }
     }
 }
