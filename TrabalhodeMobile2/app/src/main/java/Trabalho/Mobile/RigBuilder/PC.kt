@@ -33,6 +33,7 @@ class PC {
         this.motherBoard = motherBoard
     }
 
+
     fun toHashmapPC() : HashMap <String, Any?>{
         return hashMapOf(
             "id" to id,
