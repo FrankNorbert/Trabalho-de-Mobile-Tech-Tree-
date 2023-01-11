@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         botaoInformacao.setOnClickListener{
-            //criar ainda o bagulho do popup
+            TODO("Ainda a implementar")
         }
 
         botaoPartPicker.setOnClickListener{

@@ -11,15 +11,21 @@ import android.widget.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import java.util.UUID
 
-class RigBuilderActivity() : AppCompatActivity() {
+class RigBuilderActivity : AppCompatActivity() {
 
     lateinit var botaoAddPc: FloatingActionButton
     lateinit var pcName:EditText
     lateinit var infoButton:FloatingActionButton
     lateinit var pcListView: ListView
+
+    companion object{
+        const val TAG = "RigBuilderActivity"
+
+    }
 
     var pc = arrayListOf<PC>()
 
@@ -76,6 +82,7 @@ class RigBuilderActivity() : AppCompatActivity() {
     }
 
     inner class PcAdapter : BaseAdapter() {
+
         override fun getCount(): Int {
             return pc.size
         }
@@ -97,23 +104,40 @@ class RigBuilderActivity() : AppCompatActivity() {
             textViewPcName.text = pc[p0].counter.toString()
 
             deleteButton.setOnClickListener{
-                try {
-                    var pcToRemove = pc.remove(pc[p0]).toString()
-                    db.collection("users").document(userId).collection("PC").document(pcToRemove).delete().addOnSuccessListener { task->
-                        Log.d(TAG,"Pc deleted with success")
-                        Toast.makeText(this@RigBuilderActivity,"YOU KILLED IT",Toast.LENGTH_SHORT).show()
-                    }.addOnFailureListener{
-                        Toast.makeText(this@RigBuilderActivity,"Failed to delete the pc",Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e:java.lang.Exception){
-                    Toast.makeText(this@RigBuilderActivity,"Could not delete the pc",Toast.LENGTH_SHORT).show()
+
+                var pcId = db.collection("users").document(userId).collection("PC").document().id
+
+                db.collection("users").document(userId).collection("PC").document(pcId).delete().addOnSuccessListener {
+                    Log.d(TAG,"Pc deleted with success")
+                    Toast.makeText(this@RigBuilderActivity,"YOU KILLED IT",Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener{
+                    Toast.makeText(this@RigBuilderActivity,"Failed to delete the pc",Toast.LENGTH_SHORT).show()
                 }
+
+                db.collection("users").document(userId).collection("PC").addSnapshotListener{ value, e->
+
+                    if (e!=null){
+                        Log.w(TAG,"Listen failed.",e)
+                        return@addSnapshotListener
+                    }
+
+                    pc.clear()
+                    for (doc in value!!){
+                        val pcThing = PC.fromQueryDoc(doc)
+                        pc.remove(pcThing)
+                    }
+
+                    pcAdapter.notifyDataSetChanged()
+                }
+
+            }
+
+            editButton.setOnClickListener{
 
             }
 
             textViewPcName.text = pc[p0].name
             return rootView
         }
-
     }
 }
