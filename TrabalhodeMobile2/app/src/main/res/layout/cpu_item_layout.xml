@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/part_picker_cpu_name"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:text="Cpu Name"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/cpu_line"
+        android:layout_width="173dp"
+        android:layout_height="50dp"
+        android:text="cpu line"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
