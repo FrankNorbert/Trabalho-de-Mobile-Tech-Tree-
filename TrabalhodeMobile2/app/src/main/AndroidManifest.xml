@@ -13,17 +13,33 @@
         android:theme="@style/Theme.TrabalhoDeMobile"
         tools:targetApi="31">
         <activity
+            android:name=".PartPicker.GpuSelectorActivity"
+            android:exported="false"
+            android:parentActivityName=".PartPicker.PartPickerActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RigBuilder.SubActivities.PcEditActivity"
+            android:exported="false"
+            android:parentActivityName=".RigBuilder.RigBuilderActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".PartPicker.PartPickerActivity"
-            android:parentActivityName=".Core.MainActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".Core.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".RigBuilder.RigBuilderActivity"
-            android:parentActivityName=".Core.MainActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".Core.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

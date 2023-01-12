@@ -1,7 +1,9 @@
 package Trabalho.Mobile.RigBuilder
 
 import Trabalho.Mobile.R
+import Trabalho.Mobile.RigBuilder.SubActivities.PcEditActivity
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -26,7 +28,6 @@ class RigBuilderActivity : AppCompatActivity() {
 
     companion object{
         const val TAG = "RigBuilderActivity"
-
     }
 
     var pc = arrayListOf<PC>()
@@ -135,7 +136,8 @@ class RigBuilderActivity : AppCompatActivity() {
             }
 
             editButton.setOnClickListener{
-
+                Toast.makeText(this@RigBuilderActivity,"Make it big and stronger",Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@RigBuilderActivity,PcEditActivity::class.java))
             }
 
             textViewPcName.text = pc[p0].name

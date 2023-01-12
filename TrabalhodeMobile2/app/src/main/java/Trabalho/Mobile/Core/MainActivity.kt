@@ -7,6 +7,9 @@ import Trabalho.Mobile.RigBuilder.RigBuilderActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -50,5 +53,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"You will touch some grass", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this@MainActivity,LoginActivity::class.java))
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        var menuInflater : MenuInflater = getMenuInflater()
+        menuInflater.inflate(R.menu.main_activity_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.component_bookmark -> Toast.makeText(this@MainActivity,"Em implementação",Toast.LENGTH_SHORT).show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

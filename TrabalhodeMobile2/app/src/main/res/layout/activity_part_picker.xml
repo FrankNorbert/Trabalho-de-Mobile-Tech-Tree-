@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".PartPicker.PartPickerActivity">
 
+    <TextView
+        android:id="@+id/part_picker_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Select what you want"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/picker_cpu"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:text="cpu"
+        app:layout_constraintBottom_toTopOf="@+id/picker_fragment_display"
+        app:layout_constraintEnd_toStartOf="@+id/picker_gpu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <Button
+        android:id="@+id/picker_gpu"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
+        android:text="gpu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/picker_cpu"
+        app:layout_constraintTop_toBottomOf="@+id/part_picker_text" />
+
+    <FrameLayout
+        android:id="@+id/picker_fragment_display"
+        android:layout_width="410dp"
+        android:layout_height="403dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
