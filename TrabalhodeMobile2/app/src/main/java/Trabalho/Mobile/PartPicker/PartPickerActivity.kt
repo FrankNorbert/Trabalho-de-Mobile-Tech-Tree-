@@ -22,14 +22,13 @@ class PartPickerActivity : AppCompatActivity() {
 
     val cpuFragment = CpuFragment()
 
-    val db = Firebase.firestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_part_picker)
 
         cpuButton = findViewById(R.id.picker_cpu)
         gpuButton = findViewById(R.id.picker_gpu)
+        /*
         fragmentView = findViewById(R.id.picker_fragment_display)
 
         cpuButton.setOnClickListener{
@@ -37,6 +36,11 @@ class PartPickerActivity : AppCompatActivity() {
                 replace(R.id.picker_fragment_display,cpuFragment)
                 commit()
             }
+        }
+         */
+
+        cpuButton.setOnClickListener{
+            startActivity(Intent(this@PartPickerActivity,CpuSelectorActivity::class.java))
         }
 
         gpuButton.setOnClickListener{
