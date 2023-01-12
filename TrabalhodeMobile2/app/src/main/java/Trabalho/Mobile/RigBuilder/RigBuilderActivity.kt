@@ -2,14 +2,21 @@ package Trabalho.Mobile.RigBuilder
 
 import Trabalho.Mobile.R
 import Trabalho.Mobile.RigBuilder.SubActivities.PcEditActivity
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -25,6 +32,9 @@ class RigBuilderActivity : AppCompatActivity() {
     lateinit var pcName:EditText
     lateinit var infoButton:FloatingActionButton
     lateinit var pcListView: ListView
+
+    private val channel_id : String = "channel_id_rigbuilder_01"
+    private val notification_Id = 101
 
     companion object{
         const val TAG = "RigBuilderActivity"
@@ -45,6 +55,7 @@ class RigBuilderActivity : AppCompatActivity() {
         infoButton = findViewById(R.id.rig_builder_button_info)
         pcListView = findViewById(R.id.rig_builder_pc_list)
 
+        createNotificationChannel()
 
         botaoAddPc.setOnClickListener{
 
@@ -58,6 +69,7 @@ class RigBuilderActivity : AppCompatActivity() {
                 Log.w(TAG,"Error Adding PC",e)
                 Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
             }
+            sendNotification()
         }
         pcListView.adapter = pcAdapter
 
@@ -80,8 +92,28 @@ class RigBuilderActivity : AppCompatActivity() {
 
     }
 
-    fun getPcName():String{
-        return pcName.toString()
+    fun createNotificationChannel(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            val name = "Pc Added!"
+            val description = "You created a PC!"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(channel_id,name,importance).apply {
+                this.description = description
+            }
+            val notificationManager :NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    fun sendNotification(){
+        val builder = NotificationCompat.Builder(this, channel_id)
+            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setContentTitle("Pc Added!")
+            .setContentText("You created a PC!")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        with(NotificationManagerCompat.from(this)){
+            notify(notification_Id, builder.build())
+        }
     }
 
     inner class PcAdapter : BaseAdapter() {
